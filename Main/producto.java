@@ -1,6 +1,6 @@
 package Main;
 
-public class producto {
+public class producto extends Thread {
     
     private int id;
     private String color;
@@ -15,13 +15,15 @@ public class producto {
     }
 
     public void imprimir (){
-        System.out.print( String.valueOf(id) + color + mensaje );
+        System.out.println( String.valueOf(id) + ": " + color + ": " + mensaje );
     }
 
-/*  public void run (){
-        
+
+    public void run (  ){
+
     }
- */
+
+
 
     
 

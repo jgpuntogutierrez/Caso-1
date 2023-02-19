@@ -6,17 +6,35 @@ import java.util.ArrayList;
 public class Buffer {
 
     private int n ;
-    private ArrayList<producto> buff ;
+    ArrayList<producto> buff ;
     
 
-    public Buffer (int n) {
-        this.n = n ;
-        buff = new ArrayList<producto>(n);
+    public Buffer (String dif, int limite) {
 
+        if (dif == "lim"){
+
+            this.n = n ;
+        buff = new ArrayList<producto>(limite);
+
+        } else {
+            this.n = n ;
+        buff = new ArrayList<producto>();
+        }
+
+
+
+
+        
    }
 
 
-   
+   public void imprimir (){
+    
+    for (int i = 0; i < buff.size(); i++){
+       buff.get(i).imprimir();
+
+    }
+    }
 
 
 
@@ -55,12 +73,7 @@ public class Buffer {
 
 
 
-    public void imprimir (){
-        for (int i = 0; 0 < buff.size(); i++){
-           buff.get(i).imprimir();
-
-        }
-  }
+    
 
 
 
