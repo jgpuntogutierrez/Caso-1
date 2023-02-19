@@ -11,10 +11,17 @@ public class Buffer {
         this.n = n ;
         buff = new ArrayList<producto>(n);
 
+    
+   }
+
+   public void imprimir (){
+
+    
+
    }
 
 
-    public synchronized void almacenar (Integer i) {
+    public synchronized void almacenar (Integer i) throws InterruptedException {
 
         while (buff.size() == n){
             wait() ; //Conceptual
@@ -26,7 +33,7 @@ public class Buffer {
     }
 
 
-    public synchronized Integer retirar () {
+    public synchronized Integer retirar () throws InterruptedException {
 
         while (buff.size () == 0){
             wait() ; //Conceptual
