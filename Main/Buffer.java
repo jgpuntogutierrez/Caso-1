@@ -16,6 +16,8 @@ public class Buffer {
    }
 
 
+   
+
 
 
     public synchronized void almacenar (producto prod) {
@@ -50,6 +52,15 @@ public class Buffer {
         return i ;
 
     }
+
+
+
+    public void imprimir (){
+        for (int i = 0; 0 < buff.size(); i++){
+           buff.get(i).imprimir();
+
+        }
+  }
 
 
 
