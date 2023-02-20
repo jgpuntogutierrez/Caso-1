@@ -32,21 +32,21 @@ public class principal {
 
 
 
-        Buffer bufferMain = new Buffer("lim", productos);
-        Buffer bufferE1 = new Buffer("lim",limBuffs);
-        Buffer bufferE2 = new Buffer("lim",limBuffs);
-        Buffer bufferFinal = new Buffer("noLim",0);
+        Buffer bufferMain = new Buffer(productos);
+        Buffer bufferE1 = new Buffer(limBuffs);
+        Buffer bufferE2 = new Buffer(limBuffs);
+        Buffer bufferFinal = new Buffer(productos);
 
 
         for (int i = 0; i < productos; i++) {
             if (i<semiAct*prodxproc){
                 producto prod = new producto(i+1, "naranja", "creado");
                 prod.start();
-                bufferMain.almacenar(prod);
+                
             } else {
                 producto prod = new producto(i+1, "azul", "creado");
                 prod.start();
-                bufferMain.almacenar(prod);
+                
             }         
           }
 

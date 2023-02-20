@@ -5,27 +5,23 @@ import java.util.ArrayList;
 
 public class Buffer {
 
-    private int n ;
+    private int limite ;
     ArrayList<producto> buff ;
     
 
-    public Buffer (String dif, int limite) {
+    public Buffer (int limite) {
 
-        if (dif == "lim"){
-
-            this.n = n ;
-        buff = new ArrayList<producto>(limite);
-
-        } else {
-            this.n = n ;
-        buff = new ArrayList<producto>();
-        }
-
-
-
-
+        this.limite = limite ;
+            buff = new ArrayList<producto>();
         
    }
+
+   /*
+    preguntarle a la profesora que 
+    si se puede almacenar en una variable el infinito
+
+
+    */
 
 
    public void imprimir (){
@@ -40,7 +36,7 @@ public class Buffer {
 
     public synchronized void almacenar (producto prod) {
 
-        while (buff.size() == n){
+        while (buff.size() == limite){
             try {
                 wait() ;
             } catch (InterruptedException e) {
