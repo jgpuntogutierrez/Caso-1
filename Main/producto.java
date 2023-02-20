@@ -19,7 +19,9 @@ public class producto extends Thread {
     }
 
 
-    public void run (  ){
+    public void run (){
+
+       // bufferMain.almacenar();
 
     }
 
